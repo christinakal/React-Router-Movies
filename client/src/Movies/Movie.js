@@ -32,17 +32,17 @@ const Movie = (props) => {
   }
 
   const { title, director, metascore, stars } = movie;
-  const movieID = movie.find()
+ 
   return (
     <div className="save-wrapper">
       <div className="movie-card">
         <Link to={`/item-list/${movie.id}`}>
-          <h2>{title}</h2>
+          <h2>{movie.title}</h2>
           <div className="movie-director">
-            Director: <em>{director}</em>
+            Director: <em>{movie.director}</em>
           </div>
           <div className="movie-metascore">
-            Metascore: <strong>{metascore}</strong>
+            Metascore: <strong>{movie.metascore}</strong>
           </div>
           <h3>Actors</h3>
 
