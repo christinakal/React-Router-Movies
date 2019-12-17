@@ -11,7 +11,7 @@ const App = () => {
     setSavedList( [...savedList, movie] );
   };
 
-  return (
+  return ( 
     <div>
       <SavedList list={savedList} />
       <Route exact path="/">
