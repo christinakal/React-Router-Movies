@@ -17,7 +17,7 @@ const App = () => {
       <Route exact path="/">
         <MovieList />
       </Route>
-      <Route path="/movies/:id">
+      <Route exact path="/movies/:movieID">
         <Movie />
       </Route>
     </div>
@@ -25,3 +25,4 @@ const App = () => {
 };
 
 export default App;
+  
