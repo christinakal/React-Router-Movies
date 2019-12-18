@@ -1,15 +1,18 @@
-import React, { useState, useEffect, useParams } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import MovieCard from "./MovieCard";
 
 
 const Movie = (props) => {
   let [movie, setMovie] = useState();
+  let { id } = useParams()
+  console.log(useParams());
  
   useEffect(() => {
 
-    let id = window.location.href.split('/')[window.location.href.split('/').length-1];
+    //let id = window.location.href.split('/')[window.location.href.split('/').length-1];
+
     // change ^^^ that line and grab the id from the URL
     // You will NEED to add a dependency array to this effect hook
 
