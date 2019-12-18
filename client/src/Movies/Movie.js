@@ -6,18 +6,15 @@ import MovieCard from "./MovieCard";
 
 const Movie = (props) => {
   let [movie, setMovie] = useState();
-  // let {id} = useParams()
-  console.log('Movie', movie);
-
  
   useEffect(() => {
-    // let id = props.id;
-    // console.log(id);
+
+    let id = window.location.href.split('/')[window.location.href.split('/').length-1];
     // change ^^^ that line and grab the id from the URL
     // You will NEED to add a dependency array to this effect hook
 
        axios
-        .get(`http://localhost:5000/api/movies/${props.id}`)
+        .get(`http://localhost:5000/api/movies/${id}`)
         .then(response => {
           setMovie(response.data);
           // console.log(response);
