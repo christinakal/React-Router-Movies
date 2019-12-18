@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { Route} from 'react-router-dom';
 import SavedList from './Movies/SavedList';
 import MovieList from './Movies/MovieList';
 import Movie from './Movies/Movie';
+import MovieCard from './Movies/MovieCard';
 
 const App = () => {
   const [savedList, setSavedList] = useState( [] );
@@ -17,8 +18,8 @@ const App = () => {
       <Route exact path="/">
         <MovieList />
       </Route>
-      <Route exact path="/movies/:movieID">
-        <Movie />
+      <Route path="/movies/:id">
+        <Movie items={MovieList}/>
       </Route>
     </div>
   );
