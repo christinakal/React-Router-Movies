@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link, useParams } from "react-router-dom";
-import MovieCard from "./MovieCard";
-import './Movie.css'
+import { useParams } from "react-router-dom";
 
 
 const Movie = (props) => {
   let [movie, setMovie] = useState();
   let { id } = useParams()
-  console.log(useParams());
+
  
   useEffect(() => {
 
@@ -32,6 +30,7 @@ const Movie = (props) => {
   
   // Uncomment this only when you have moved on to the stretch goals
   const saveMovie = () => {
+    
     const addToSavedList = props.addToSavedList;
     addToSavedList(movie) 
   }

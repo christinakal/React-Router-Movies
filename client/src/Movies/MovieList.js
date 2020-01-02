@@ -12,13 +12,15 @@ const MovieList = props => {
           setMovies(response.data);
         })
         .catch(error => {
-          console.error('Server Error', error);
+          console.error('Server Error', error); 
         });
     }
     
     getMovies();
 
   }, []);
+
+ 
   
   return (
     <div className="movie-list">

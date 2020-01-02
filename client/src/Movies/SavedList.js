@@ -12,7 +12,7 @@ const SavedList = props => (
       <div className="home-button">Home</div>
     </ Link>
   </div>
-);
+); 
 
 export default SavedList;
  
